@@ -23,11 +23,21 @@ public class CalculatorAppTest {
 	}
 
 	@Test
+	public void addTrue1() {
+		assertEquals(100, app.add(40, 60));
+	}
+
+	@Test
+	public void addTrue2() {
+		assertEquals(1000, app.add(450, 550));
+	}
+
+	@Test
 	public void addFail() {
 		assertNotEquals(35, app.add(37, 13));
 
 	}
-	
+
 	@Test
 	public void addZero() {
 		assertEquals(0, app.add(0, 0));
@@ -42,7 +52,7 @@ public class CalculatorAppTest {
 	public void subFail() {
 		assertNotEquals(2, app.sub(16, 13));
 	}
-	
+
 	@Test
 	public void subNegativeTrue() {
 		assertEquals(-13, app.sub(0, 13));
@@ -52,18 +62,21 @@ public class CalculatorAppTest {
 	public void mulTrue() {
 		assertEquals(25, app.mul(5, 5));
 	}
-	
+
 	@Test
 	public void mulZeroTrue() {
 		assertEquals(0, app.mul(10000, 0));
 	}
 
-	
 	@Test
 	public void mulFail() {
 		assertNotEquals(56, app.mul(5, 6));
 	}
 	
+	@Test
+	public void mulFail2() {
+		assertNotEquals(56, app.mul(5, 6));
+	}
 
 	@Test
 	public void divTrue() {
@@ -72,6 +85,16 @@ public class CalculatorAppTest {
 
 	@Test
 	public void divFail() {
+		assertNotEquals(1, app.div(24, 12));
+	}
+
+	@Test
+	public void divFail1() {
+		assertNotEquals(1, app.div(24, 12));
+	}
+
+	@Test
+	public void divFail2() {
 		assertNotEquals(1, app.div(24, 12));
 	}
 

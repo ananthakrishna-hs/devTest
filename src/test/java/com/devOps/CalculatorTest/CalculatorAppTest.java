@@ -19,83 +19,83 @@ public class CalculatorAppTest {
 
 	@Test
 	public void addTrue() {
-		assertEquals(65, app.add(40, 25));
+		assertEquals(65, app.sum(40, 25));
 	}
 
 	@Test
 	public void addTrue1() {
-		assertEquals(100, app.add(40, 60));
+		assertEquals(100, app.sum(40, 60));
 	}
 
 	@Test
 	public void addTrue2() {
-		assertEquals(1000, app.add(450, 550));
+		assertEquals(1000, app.sum(450, 550));
 	}
 
 	@Test
 	public void addFail() {
-		assertNotEquals(35, app.add(37, 13));
+		assertNotEquals(35, app.sum(37, 13));
 
 	}
 
 	@Test
 	public void addZero() {
-		assertEquals(0, app.add(0, 0));
+		assertEquals(0, app.sum(0, 0));
 	}
 
 	@Test
 	public void subTrue() {
-		assertEquals(3, app.sub(16, 13));
+		assertEquals(3, app.subtract(16, 13));
 	}
 
 	@Test
 	public void subFail() {
-		assertNotEquals(2, app.sub(16, 13));
+		assertNotEquals(2, app.subtract(16, 13));
 	}
 
 	@Test
 	public void subNegativeTrue() {
-		assertEquals(-13, app.sub(0, 13));
+		assertEquals(-13, app.subtract(0, 13));
 	}
 
 	@Test
 	public void mulTrue() {
-		assertEquals(25, app.mul(5, 5));
+		assertEquals(25, app.multiply(5, 5));
 	}
 
 	@Test
 	public void mulZeroTrue() {
-		assertEquals(0, app.mul(10000, 0));
+		assertEquals(0, app.multiply(10000, 0));
 	}
 
 	@Test
 	public void mulFail() {
-		assertNotEquals(56, app.mul(5, 6));
+		assertNotEquals(0, app.multiply(5, 6));
 	}
 	
 	@Test
 	public void mulFail2() {
-		assertNotEquals(56, app.mul(5, 6));
+		assertNotEquals(9090, app.multiply(5, 6));
 	}
 
 	@Test
 	public void divTrue() {
-		assertEquals(1, app.div(12, 12));
+		assertEquals(1, app.divide(12, 12));
 	}
 
 	@Test
 	public void divFail() {
-		assertNotEquals(1, app.div(24, 12));
+		assertNotEquals(1, app.divide(24, 12));
 	}
 
 	@Test
 	public void divFail1() {
-		assertNotEquals(1, app.div(24, 12));
+		assertNotEquals(64, app.divide(24, 12));
 	}
 
 	@Test
 	public void divFail2() {
-		assertNotEquals(1, app.div(24, 12));
+		assertNotEquals(979, app.divide(24, 12));
 	}
 
 }

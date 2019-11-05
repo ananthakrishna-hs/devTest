@@ -1,19 +1,19 @@
 package com.devOps.Calculator;
 
 public class CalculatorApp {
-	public int add(int x, int y) {
+	public int sum(int x, int y) {
 		return x + y;
 	}
 
-	public int sub(int x, int y) {
+	public int subtract(int x, int y) {
 		return x - y;
 	}
 
-	public int mul(int x, int y) {
+	public int multiply(int x, int y) {
 		return x * y;
 	}
 
-	public int div(int x, int y) {
+	public int divide(int x, int y) {
 		return x / y;
 	}
 }

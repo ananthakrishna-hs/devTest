@@ -97,5 +97,10 @@ public class CalculatorAppTest {
 	public void divFail2() {
 		assertNotEquals(979, app.divide(24, 12));
 	}
+	
+	@Test(expected=java.lang.ArithmeticException.class)
+    public void testDivideByZero() {
+           app.divide(10, 0);
+    }
 
 }
